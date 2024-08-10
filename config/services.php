@@ -31,4 +31,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'cloudinary' => [
+        'cloud_name' => env('dficfkyug'),
+        'api_key' => env('417924758376435'),
+        'api_secret' => env('lVDdz9kdaVVV_nIn6tM1gxVqQ58'),
+    ],
+
+
 ];

@@ -18,7 +18,7 @@
             <tr>
                 <th>{{$lists->id}}</th>
                 <th>{{$lists->name}}</th>
-                <th>{{$lists->description}}</th>
+                <th><img class="img-thumbnail" style="width: 100px" src="{{$lists->description}}" alt=""></th>
                 <th>{{$lists->content}}</th>
                 <th>{{$lists->created_at}}</th>
                 <th>{{$lists->updated_at}}</th>

@@ -2,11 +2,11 @@
 
 
 @section('content')
-    <form action="" method="POST">
+    <form name="menu-form" action="" method="POST">
         <div class="card-body">
 
             <div class="form-group">
-                <label for="menu">Name</label>
+                <label for="menu">Menu Name</label>
                 <input type="text" name="name" class="form-control"  placeholder="Enter category name">
             </div>
 
@@ -21,8 +21,9 @@
             </div>
 
             <div class="form-group">
-                <label>Description </label>
-                <textarea name="description" class="form-control"></textarea>
+                <label>Image </label>
+                <input type="hidden" name="description" class="form-control"/>
+                <button class="btn btn-primary mt-2" type="button" id="upload_widget">Upload image</button>
             </div>
 
             <div class="form-group">
@@ -50,6 +51,24 @@
         </div>
         @csrf
     </form>
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var myWidget = cloudinary.createUploadWidget({
+                cloudName: 'dficfkyug',
+                uploadPreset: 'hellopreset'}, function (error, result) {
+                if (!error && result && result.event === "success") {
+                    //console.log('Done! Here is the image info: ', result.info.url);
+                    console.log('Done! Here is the image info: ', result.info.secure_url);
+                    document.forms['menu-form']['description'].value = result.info.secure_url;
+                }
+            }
+        )
+
+        document.getElementById("upload_widget").addEventListener("click", function(){
+            myWidget.open();
+        }, false);
+    </script>
+
 @endsection
 
 
