@@ -30,13 +30,14 @@ Route::middleware(['auth'])->group(function () {
             Route::get('add', [ProductController::class, 'create']);
             Route::post('add', [ProductController::class, 'store']);
             Route::get('list', [ProductController::class, 'index']);
-            Route::get('search', [ProductController::class, 'search'])->name('product.search');
-            Route::get('edit/{product}', [ProductController::class, 'show']);
-            Route::post('edit/{product}', [ProductController::class, 'update']);
-            Route::get('destroy/{id}', [ProductController::class, 'destroy']);
+//            Route::get('search', [ProductController::class, 'search'])->name('product.search');
+//            Route::get('edit/{product}', [ProductController::class, 'show']);
+//            Route::post('edit/{product}', [ProductController::class, 'update']);
+//            Route::get('destroy/{id}', [ProductController::class, 'destroy']);
         });
     });
 });
 
 Route::get('client/index', [LoginController::class, 'indexclient']);
-Route::get('admin/products/add', [ProductController::class, 'create'])->name('admin.products.create');
+
+

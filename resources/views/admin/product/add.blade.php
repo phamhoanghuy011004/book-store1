@@ -13,16 +13,11 @@
                 <label for="author">Author</label>
                 <input type="text" name="author" class="form-control" placeholder="Enter author name">
             </div>
-
             <div class="form-group">
-                <label>Category</label>
-                <select class="form-control" name="category">
-                    <option value="">Choose Category</option>
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
+                <label for="author">Category</label>
+                <input type="text" name="author" class="form-control" placeholder="Enter category">
             </div>
+
 
             <div class="form-group">
                 <label>Image</label>

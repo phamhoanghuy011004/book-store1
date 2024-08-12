@@ -14,15 +14,7 @@ class CreateFormRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'author' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'category' => 'required|exists:categories,id', // Kiểm tra danh mục tồn tại
-            'content' => 'nullable|string',
-            'publish_at' => 'required|date',
-            'image' => 'nullable|string|max:255',
-            'amount' => 'required|integer|min:1',
-            'price' => 'required|numeric|min:0',
-            'status' => 'required|in:active,inactive',
+
         ];
     }
 
