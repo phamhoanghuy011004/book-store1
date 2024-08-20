@@ -62,6 +62,30 @@
                                 <p>Search category</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/admin/products/add" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add products </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/products/list" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>products list </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/events/add" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add event </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/authors/add" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add author </p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

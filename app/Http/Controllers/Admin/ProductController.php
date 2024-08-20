@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\CreateFormRequest;
 use App\Http\Services\Product\ProductService;
 use App\Models\Product;
-use Illuminate\Http\Request;
+
 
 class ProductController extends Controller
 {
@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function create(){
         return view('admin.product.add', [
             'title' => 'Thêm sản phẩm mới',
-            'categories' => $this->productService->getCategories()
+//            'categories' => $this->productService->getCategories()
         ]);
     }
     public function store(CreateFormRequest $request)
